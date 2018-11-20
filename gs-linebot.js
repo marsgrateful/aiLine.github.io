@@ -7,7 +7,7 @@ function doGet(e){
   }
 
   var nowDatetime = new Date().toLocaleString();
-  userProperties.setProperty('temperatureText', nowDatetime  + "的溫度是 " + temperature + " 度");
+  userProperties.setProperty('temperatureText', nowDatetime  + "的溫度___是 " + temperature + " 度");
   
   var returnText = temperature + " OK";
   var textOutput = ContentService.createTextOutput(returnText)
@@ -77,7 +77,7 @@ function doPost(e) {
 
 function getMisunderstandWords() {
   var _misunderstandWords = [
-    "不好意思，我無法理解您的需求",
+    "不不好意思，我無法理解您的需求!",
     "再說明白一點好嗎？我只是一個不太懂事的 baby 機器人",
     "我不懂您的意思，抱歉我會加強訓練的"
   ];
