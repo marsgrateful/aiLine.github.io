@@ -5,6 +5,7 @@ function doGet(e){
   if (!temperature) {
     return;
   }
+  // 記得sheet必須要開放權限 need open limit of authority
 var sheet = SpreadsheetApp.openById('1KbXKifdT0eJnjHoacke7dl49x-Ka33HXYubfXc3e3pE').getActiveSheet();
   sheet.appendRow(["start",temperature]);
   
