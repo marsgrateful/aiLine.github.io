@@ -5,10 +5,10 @@ function doGet(e){
   if (!temperature) {
     return;
   }
-  // 記得sheet必須要開放權限 need open limit of authority
-var sheet =  SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g/edit?usp=sharing');
+  // 還沒解
+//var sheet =  SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g/edit?usp=sharing');
+  var sheet = SpreadsheetApp.openById('1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g').getActiveSheet();
   sheet.appendRow(["start",temperature]);
-  
 
   
   var nowDatetime = new Date().toLocaleString();
