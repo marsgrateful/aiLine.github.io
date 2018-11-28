@@ -5,7 +5,11 @@ function doGet(e){
   if (!temperature) {
     return;
   }
+var sheet = SpreadsheetApp.openById('1KbXKifdT0eJnjHoacke7dl49x-Ka33HXYubfXc3e3pE').getActiveSheet();
+  sheet.appendRow(["start",temperature]);
+  
 
+  
   var nowDatetime = new Date().toLocaleString();
   userProperties.setProperty('temperatureText', nowDatetime  + "的溫度___是 " + temperature + " 度");
   
