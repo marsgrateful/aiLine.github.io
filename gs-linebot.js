@@ -5,10 +5,12 @@ function doGet(e){
   if (!temperature) {
     return;
   }
-  // 還沒解
+  // 權限透過 function 開啟一次授權即可全通
 //var sheet =  SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g/edit?usp=sharing');
   var sheet = SpreadsheetApp.openById('1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g').getActiveSheet();
-  sheet.appendRow(["start",temperature]);
+  var dt = new Date();
+
+  sheet.appendRow([dt,temperature]);
 
   
   var nowDatetime = new Date().toLocaleString();
