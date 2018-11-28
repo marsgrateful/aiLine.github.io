@@ -6,7 +6,7 @@ function doGet(e){
     return;
   }
   // 記得sheet必須要開放權限 need open limit of authority
-var sheet =  SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1KbXKifdT0eJnjHoacke7dl49x-Ka33HXYubfXc3e3pE/edit#gid=0');
+var sheet =  SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1vuHzgakq1qADJgK5qioWQefoqcX5yWYjAB4TnqAM13g/edit?usp=sharing');
   sheet.appendRow(["start",temperature]);
   
 
